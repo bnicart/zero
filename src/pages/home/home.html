@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle id="menu-icon">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Insert Title Here
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button color="primary" (click)="viewSignInPage()">Sign In</button>
+  <button ion-button color="secondary" (click)="viewSignUpPage()">Sign Up</button>
+  <ion-card>
+    <ion-card-content>
+      <ion-icon class="pull-right" name="ios-body-outline"></ion-icon>
+      <h2>Card Title Here</h2>
+      <p>The quick brown fox</p>
+      <p>Jumps over the lazy dog.</p>
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
+</ion-content>

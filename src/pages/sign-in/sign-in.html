@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title>
+      Sign In
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="signIn(signInDetails)" #signInForm="ngForm">
+    <ion-item>
+      <ion-label text-center color="primary">
+        <h1>Welcome back!</h1>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Username</ion-label>
+      <ion-input type="text" [(ngModel)]="signInDetails.username" name="username" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" stacked>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="signInDetails.password" name="password" required></ion-input>
+    </ion-item>
+    <button full ion-button block color="tertiary" type="submit" [disabled]="!signInForm.form.valid">Sign In</button>
+  </form>
+  <p text-center>Don't have an account? <a href="#" (click)="viewSignUpPage()">Sign Up</a></p>
+</ion-content>
